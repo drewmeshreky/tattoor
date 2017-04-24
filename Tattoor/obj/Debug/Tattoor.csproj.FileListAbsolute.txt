@@ -66,3 +66,7 @@ C:\Users\Drew\Documents\GitHub\tattoor\Tattoor\bin\Microsoft.Owin.Security.Twitt
 C:\Users\Drew\Documents\GitHub\tattoor\Tattoor\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\Drew\Documents\GitHub\tattoor\Tattoor\obj\Debug\Tattoor.dll
 C:\Users\Drew\Documents\GitHub\tattoor\Tattoor\obj\Debug\Tattoor.pdb
+C:\Users\Drew\Documents\GitHub\tattoor\Tattoor\bin\crypto.dll
+C:\Users\Drew\Documents\GitHub\tattoor\Tattoor\bin\InstaSharp.dll
+C:\Users\Drew\Documents\GitHub\tattoor\Tattoor\bin\crypto.pdb
+C:\Users\Drew\Documents\GitHub\tattoor\Tattoor\bin\crypto.xml

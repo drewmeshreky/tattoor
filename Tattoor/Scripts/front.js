@@ -98,7 +98,7 @@ function map() {
     map.addMarker({
         lat: 33.8242518,
         lng: -117.5469268,
-        //icon: image,
+        icon: image,
         title: '',
         infoWindow: {
             content: '<p><strong>Hey, that\'s my house!</strong><br/>1631 Camino De Salmon St.<br/>Corona, CA 92881<br/>951.533.2311</p>'
