@@ -12,6 +12,10 @@ namespace Tattoor.Controllers
         // GET: Request
         public async Task<ActionResult> Artist(string id)
         {
+            ViewBag.FirstName = "Drew";
+            ViewBag.LastName = "Meshreky";
+            ViewBag.Header = "Get an appointment requests page like this for yourself! For free!";
+
             var instagramConfig = new InstagramConfig("2551176810b7497ebe94e79fa551ea06", "2551176810b7497ebe94e79fa551ea06");
 
             OAuthResponse oAuthResponse = new OAuthResponse();
@@ -24,6 +28,8 @@ namespace Tattoor.Controllers
 
             var recent = await users.Recent(user.Id, string.Empty, string.Empty, 8, null, null);
             ViewBag.Media = recent.Data.Select(media => media.Images.StandardResolution.Url).ToList();
+
+            ViewBag.LocationTitle = "Meshreky Residence";
 
             return View();
         }

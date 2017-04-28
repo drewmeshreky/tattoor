@@ -10,20 +10,20 @@
         <div class="container-fluid clearfix">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2 col-sm-12">
-                    <h1><span class="bold">FirstName</span><br /><span class="bold">LastName</span></h1>
-                    <p class="roboto">And this is a theme for your personal or company website brought to you by <a href="http://bootstrapious.com" class="external">Bootstrapious.com</a></p>
+                    <h1><span class="bold">@ViewBag.FirstName</span><br /><span class="bold">@ViewBag.LastName</span></h1>
+                    <p class="roboto">@ViewBag.Header</p>
                 </div>
             </div>
         </div>
-    </div><a href="#requestInfo" class="icon faa-float animated scroll-to"><i class="fa fa-angle-double-down"></i></a>
+    </div><a href="#apptRequest" class="icon faa-float animated scroll-to"><i class="fa fa-angle-double-down"></i></a>
 </section>
 <!-- intro -->
 <!-- contact -->
-<section id="requestInfo">
+<section id="apptRequest">
     <div class="container clearfix">
         <div class="row">
             <div class="col-md-12">
-                <h2 class="heading">Request Info</h2>
+                <h2 class="heading">Appointment Request</h2>
                 <div class="row">
                     <div class="col-md-6">
                         <form id="contact-form" method="post" action="contact.php" class="contact-form form">
@@ -82,11 +82,11 @@
 </section>
 <!-- contact -->
 <!-- portfolio -->
-<section id="portfolio" class="no-padding-bottom">
+<section id="instagram" class="no-padding-bottom">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h2 class="heading">Portfolio</h2>
+                <h2 class="heading">LATEST FROM INSTAGRAM</h2>
             </div>
         </div>
     </div>
@@ -103,11 +103,11 @@
 </section>
 <!-- portfolio -->
 <!-- map -->
-<section id="locations">
+<section id="location">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h2 class="heading">Locations</h2>
+                <h2 class="heading">@ViewBag.LocationTitle</h2>
             </div>
         </div>
     </div>

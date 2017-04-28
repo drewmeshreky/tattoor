@@ -14,8 +14,10 @@ C:\Users\Drew\Documents\GitHub\tattoor\Tattoor\bin\Tattoor.dll.config
 C:\Users\Drew\Documents\GitHub\tattoor\Tattoor\bin\Tattoor.dll
 C:\Users\Drew\Documents\GitHub\tattoor\Tattoor\bin\Tattoor.pdb
 C:\Users\Drew\Documents\GitHub\tattoor\Tattoor\bin\Antlr3.Runtime.dll
+C:\Users\Drew\Documents\GitHub\tattoor\Tattoor\bin\crypto.dll
 C:\Users\Drew\Documents\GitHub\tattoor\Tattoor\bin\EntityFramework.dll
 C:\Users\Drew\Documents\GitHub\tattoor\Tattoor\bin\EntityFramework.SqlServer.dll
+C:\Users\Drew\Documents\GitHub\tattoor\Tattoor\bin\InstaSharp.dll
 C:\Users\Drew\Documents\GitHub\tattoor\Tattoor\bin\Microsoft.AspNet.Identity.Core.dll
 C:\Users\Drew\Documents\GitHub\tattoor\Tattoor\bin\Microsoft.AspNet.Identity.EntityFramework.dll
 C:\Users\Drew\Documents\GitHub\tattoor\Tattoor\bin\Microsoft.AspNet.Identity.Owin.dll
@@ -40,7 +42,10 @@ C:\Users\Drew\Documents\GitHub\tattoor\Tattoor\bin\System.Web.WebPages.Deploymen
 C:\Users\Drew\Documents\GitHub\tattoor\Tattoor\bin\System.Web.WebPages.dll
 C:\Users\Drew\Documents\GitHub\tattoor\Tattoor\bin\System.Web.WebPages.Razor.dll
 C:\Users\Drew\Documents\GitHub\tattoor\Tattoor\bin\WebGrease.dll
+C:\Users\Drew\Documents\GitHub\tattoor\Tattoor\bin\crypto.pdb
+C:\Users\Drew\Documents\GitHub\tattoor\Tattoor\bin\crypto.xml
 C:\Users\Drew\Documents\GitHub\tattoor\Tattoor\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Drew\Documents\GitHub\tattoor\Tattoor\bin\Newtonsoft.Json.xml
 C:\Users\Drew\Documents\GitHub\tattoor\Tattoor\bin\System.Web.Helpers.xml
 C:\Users\Drew\Documents\GitHub\tattoor\Tattoor\bin\System.Web.Mvc.xml
 C:\Users\Drew\Documents\GitHub\tattoor\Tattoor\bin\System.Web.Optimization.xml
@@ -49,7 +54,6 @@ C:\Users\Drew\Documents\GitHub\tattoor\Tattoor\bin\System.Web.WebPages.xml
 C:\Users\Drew\Documents\GitHub\tattoor\Tattoor\bin\System.Web.WebPages.Deployment.xml
 C:\Users\Drew\Documents\GitHub\tattoor\Tattoor\bin\System.Web.WebPages.Razor.xml
 C:\Users\Drew\Documents\GitHub\tattoor\Tattoor\bin\Antlr3.Runtime.pdb
-C:\Users\Drew\Documents\GitHub\tattoor\Tattoor\bin\Newtonsoft.Json.xml
 C:\Users\Drew\Documents\GitHub\tattoor\Tattoor\bin\EntityFramework.xml
 C:\Users\Drew\Documents\GitHub\tattoor\Tattoor\bin\EntityFramework.SqlServer.xml
 C:\Users\Drew\Documents\GitHub\tattoor\Tattoor\bin\Microsoft.AspNet.Identity.Core.xml
@@ -66,7 +70,3 @@ C:\Users\Drew\Documents\GitHub\tattoor\Tattoor\bin\Microsoft.Owin.Security.Twitt
 C:\Users\Drew\Documents\GitHub\tattoor\Tattoor\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\Drew\Documents\GitHub\tattoor\Tattoor\obj\Debug\Tattoor.dll
 C:\Users\Drew\Documents\GitHub\tattoor\Tattoor\obj\Debug\Tattoor.pdb
-C:\Users\Drew\Documents\GitHub\tattoor\Tattoor\bin\crypto.dll
-C:\Users\Drew\Documents\GitHub\tattoor\Tattoor\bin\InstaSharp.dll
-C:\Users\Drew\Documents\GitHub\tattoor\Tattoor\bin\crypto.pdb
-C:\Users\Drew\Documents\GitHub\tattoor\Tattoor\bin\crypto.xml
