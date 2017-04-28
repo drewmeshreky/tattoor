@@ -93,7 +93,7 @@ function map() {
         styles: styles
     });
 
-    var image = 'Images/marker.png';
+    var image = './Images/marker.png';
 
     map.addMarker({
         lat: 33.8242518,
