@@ -1,12 +1,1 @@
 /* your styles go here */
-.intro {
-  height: 65%;
-  min-height: 350px;
-}
-.intro.image-background {
-  background: url('') center center no-repeat;
-}
-.intro .content {
-  top: 25%;
-}
-

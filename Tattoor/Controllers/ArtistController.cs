@@ -1,17 +1,25 @@
 ﻿using InstaSharp;
 using InstaSharp.Endpoints;
 using InstaSharp.Models.Responses;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web.Mvc;
 
 namespace Tattoor.Controllers
 {
-    public class RequestController : Controller
+    public class ArtistController : Controller
     {
         // GET: Request
-        public async Task<ActionResult> Artist(string id)
+        public async Task<ActionResult> Index(string id)
         {
+            ViewBag.MenuItmes = new Dictionary<string, string>
+            {
+                ["Appointment Request"] = "#apptRequest",
+                ["photos"] = "#photos",
+                ["Location"] = "#location",
+            };
+
             ViewBag.FirstName = "Drew";
             ViewBag.LastName = "Meshreky";
             ViewBag.Header = "Get an appointment requests page like this for yourself! For free!";

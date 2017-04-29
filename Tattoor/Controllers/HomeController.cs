@@ -10,6 +10,16 @@ namespace Tattoor.Controllers
     {
         public ActionResult Index()
         {
+            ViewBag.MenuItmes = new Dictionary<string, string>
+            {
+                ["Home"] = "#intro",
+                ["About"] = "#about",
+                ["Services"] = "#services",
+                ["Portfolio"] = "#portfolio",
+                ["Text"] = "#text",
+                ["Team"] = "#team",
+                ["Contact"] = "#contact",
+            };
             return View();
         }
     }
