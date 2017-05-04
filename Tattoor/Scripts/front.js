@@ -77,8 +77,8 @@ function map() {
 
     map = new GMaps({
         el: '#map',
-        lat: 33.8242518,
-        lng: -117.5469268,
+        lat: $("#lat").val(),
+        lng: $("#lng").val(),
         zoomControl: true,
         zoomControlOpt: {
             style: 'SMALL',
@@ -96,8 +96,8 @@ function map() {
     var image = '../Images/marker.png';
 
     map.addMarker({
-        lat: 33.8242518,
-        lng: -117.5469268,
+        lat: $("#lat").val(),
+        lng: $("#lng").val(),
         icon: image,
         title: '',
         infoWindow: {

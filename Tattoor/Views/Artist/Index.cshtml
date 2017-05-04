@@ -1,7 +1,29 @@
 ﻿@Html.Partial("_Navbar");
 
+@Html.Hidden("lat", 33.8242518);
+@Html.Hidden("lng", -117.5469268);
+
+@*home 33.8242518,-117.5469268*@
+@*black anchor 34.4262142,-117.3690332*@
+
+<!-- header -->
+<section id="header">
+    <div class="container clearfix">
+        <div class="row">
+            <div class="col-md-12 active">
+                <h1>@ViewBag.FullName</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h4>@ViewBag.Header</h4>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- header -->
 <!-- contact -->
-<section id="apptRequest">
+<section class="section-gray" id="apptRequest">
     <div class="container clearfix">
         <div class="row">
             <div class="col-md-12">
@@ -89,10 +111,40 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h2 class="heading">@ViewBag.LocationTitle</h2>
+                <h2 class="heading">Location</h2>
             </div>
         </div>
     </div>
-    <section id="map"></section>
+    <div class="container-fluid">
+        <div class="row no-space">
+            @foreach (var location in ViewBag.Locations)
+            {
+                var fullAddress = string.Join(", ",
+                                               new string[] {
+                                             location.Address1,
+                                             location.Address2,
+                                             location.City,
+                                             location.State,
+                                             location.PostalCode}
+                                               .Where(s => !string.IsNullOrEmpty(s)));
+
+                <h4 style="text-align: center">@location.Name</h4>
+                <p style="text-align: center">@fullAddress</p>
+                <section id="map"></section>
+                @*var columnWidthClass = "col-md-" + (12 / ViewBag.Locations.Count).ToString();
+
+                <div class="col-sm-4 @columnWidthClass">
+                    <h4 style="text-align: center">@location.Name</h4>
+                    <p style="text-align: center">@fullAddress</p>
+                    @{var mapAddress = fullAddress.Replace(" ", "+");}
+                    <iframe width="100%"
+                            height="450"
+                            frameborder="0" style="border:0"
+                            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAHcfHPsIjF0g_XqN0nkFSFFhzAAnmnNYw&q=@fullAddress"
+                            allowfullscreen></iframe>
+                </div>*@
+            }
+            </div>
+        </div>
 </section>
 <!-- map -->
