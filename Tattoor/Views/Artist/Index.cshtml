@@ -10,12 +10,11 @@
 <section id="header">
     <div class="container clearfix">
         <div class="row">
-            <div class="col-md-12 active">
-                <h1>@ViewBag.FullName</h1>
+            <div class="col-md-2">
+                <img src="@ViewBag.Image" />
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-10">
+                <h1>@ViewBag.FullName</h1>
                 <h4>@ViewBag.Header</h4>
             </div>
         </div>
@@ -35,37 +34,70 @@
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <label for="name">First Name *</label>
-                                            <input type="text" name="name" id="name" placeholder="Enter your first name" required="required" class="form-control">
+                                            <input type="text" name="name" id="name" placeholder="First name" required="required" class="form-control">
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <label for="surname">Last Name *</label>
-                                            <input type="text" name="surname" id="surname" placeholder="Enter your last name" required="required" class="form-control">
+                                            <input type="text" name="surname" id="surname" placeholder="Last name" required="required" class="form-control">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <label for="email">Email *</label>
-                                            <input type="email" name="email" id="email" placeholder="Enter your email address" required="required" class="form-control">
+                                            <input type="email" name="email" id="email" placeholder="Email address" required="required" class="form-control">
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <label for="telephone">Telephone *</label>
-                                            <input type="tel" name="telephone" id="telephone" placeholder="Enter your mobile number" required="required" class="form-control">
+                                            <input type="tel" name="telephone" id="telephone" placeholder="Mobile number" required="required" class="form-control">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-12">
                                         <div class="form-group">
-                                            <label for="message">Your message for us *</label>
-                                            <textarea rows="4" name="message" id="message" placeholder="Enter your message" required="required" class="form-control"></textarea>
+                                            <textarea rows="4" name="message" id="message" placeholder="What do you want to get?" required="required" class="form-control"></textarea>
                                         </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <select class="form-control" id="placement" title="Testing" required>
+                                                <option value="" disabled selected style="display: none;">Where do you want it?</option>
+                                                <option value="Head">Head</option>
+                                                <option value="Face">Face</option>
+                                                <option value="Neck">Neck</option>
+                                                <option value="Back">Back</option>
+                                                <option value="Chest">Chest</option>
+                                                <option value="Shoulder">Shoulder</option>
+                                                <option value="Upper arm">Upper arm</option>
+                                                <option value="Forearm">Forearm</option>
+                                                <option value="Stomach">Stomach</option>
+                                                <option value="Thigh">Thigh</option>
+                                                <option value="Calf">Calf</option>
+                                                <option value="Foot">Foot</option>
+                                                <option value="Other">Other</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <select class="form-control" id="size" required>
+                                                <option value="" disabled selected style="display: none;">How big?</option>
+                                                <option value="XS">XS - 0.5″ x 0.5″</option>
+                                                <option value="S">S – 1″ x 2″</option>
+                                                <option value="M">M – 2″ x 3″</option>
+                                                <option value="L">L – 3″ x 4″</option>
+                                                <option value="XL">XL – 5″ x 6″</option>
+                                                <option value="XXL">XXL – 6″ x 7″</option>
+                                                <option value="XXXL">XXXL – 8″ x 10″</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12">
                                         <div class="text-center">
                                             <input type="submit" value="Send message" class="btn btn-primary btn-block">
                                         </div>
@@ -75,9 +107,11 @@
                         </form>
                     </div>
                     <div class="col-md-6">
-                        <p>Effects present letters inquiry no an removed or friends. Desire behind latter me though in. Supposing shameless am he engrossed up additions. My possible peculiar together to. Desire so better am cannot he up before points. Remember mistaken opinions it pleasure of debating. Court front maids forty if aware their at. Chicken use are pressed removed. </p>
-                        <p>Able an hope of body. Any nay shyness article matters own removal nothing his forming. Gay own additions education satisfied the perpetual. If he cause manor happy. Without farther she exposed saw man led. Along on happy could cease green oh. </p>
-                        <p class="social"><a href="#" title="" class="facebook"><i class="fa fa-facebook"></i></a><a href="#" title="" class="twitter"><i class="fa fa-twitter"></i></a><a href="#" title="" class="gplus"><i class="fa fa-google-plus"></i></a><a href="#" title="" class="instagram"><i class="fa fa-instagram"></i></a><a href="#" title="" class="email"><i class="fa fa-envelope"></i></a></p>
+                        @foreach (var faq in ViewBag.FAQs)
+                        {
+                            <h5>@faq.Question</h5>
+                            <p>@faq.Answer</p>
+                        }
                     </div>
                 </div>
             </div>
@@ -98,9 +132,9 @@
         <div class="row no-space">
             @foreach (var media in ViewBag.Media)
             {
-                <div class="col-sm-4 col-md-3">
-                    <div class="box"><a href="#" title=""><img src=@media alt="" class="img-responsive"></a></div>
-                </div>
+            <div class="col-sm-4 col-md-3">
+                <div class="box"><a href="#" title=""><img src=@media alt="" class="img-responsive"></a></div>
+            </div>
             }
         </div>
     </div>
@@ -133,18 +167,18 @@
                 <section id="map"></section>
                 @*var columnWidthClass = "col-md-" + (12 / ViewBag.Locations.Count).ToString();
 
-                <div class="col-sm-4 @columnWidthClass">
-                    <h4 style="text-align: center">@location.Name</h4>
-                    <p style="text-align: center">@fullAddress</p>
-                    @{var mapAddress = fullAddress.Replace(" ", "+");}
-                    <iframe width="100%"
-                            height="450"
-                            frameborder="0" style="border:0"
-                            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAHcfHPsIjF0g_XqN0nkFSFFhzAAnmnNYw&q=@fullAddress"
-                            allowfullscreen></iframe>
-                </div>*@
+                    <div class="col-sm-4 @columnWidthClass">
+                        <h4 style="text-align: center">@location.Name</h4>
+                        <p style="text-align: center">@fullAddress</p>
+                        @{var mapAddress = fullAddress.Replace(" ", "+");}
+                        <iframe width="100%"
+                                height="450"
+                                frameborder="0" style="border:0"
+                                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAHcfHPsIjF0g_XqN0nkFSFFhzAAnmnNYw&q=@fullAddress"
+                                allowfullscreen></iframe>
+                    </div>*@
             }
-            </div>
         </div>
+    </div>
 </section>
 <!-- map -->

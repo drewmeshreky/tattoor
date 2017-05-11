@@ -22,9 +22,6 @@ namespace Tattoor.Controllers
                 ["Location"] = "#location",
             };
 
-            ViewBag.FullName = "Drew Meshreky";
-            ViewBag.Header = "Get an appointment request page (just like this one) for yourself! For free!";
-
             var instagramConfig = new InstagramConfig("2551176810b7497ebe94e79fa551ea06", "2551176810b7497ebe94e79fa551ea06");
 
             OAuthResponse oAuthResponse = new OAuthResponse();
@@ -35,28 +32,40 @@ namespace Tattoor.Controllers
             UsersResponse usersResponse = await users.Search("tattoor.co", 1);
             var user = usersResponse.Data.First();
 
+            ViewBag.Image = user.ProfilePicture;
+            ViewBag.FullName = user.FullName;
+            ViewBag.Header = user.Bio; // "Get an appointment request page (just like this one) for yourself! For free!";
+
             var recent = await users.Recent(user.Id, string.Empty, string.Empty, 8, null, null);
             ViewBag.Media = recent.Data.Select(media => media.Images.StandardResolution.Url).ToList();
+
+            ViewBag.FAQs = new List<FAQ>
+            {
+                new FAQ
+                {
+                    
+                    Question = "How much do you charge?",
+                    Answer = "Appointment request pages (just like this one) are free! Get one for yourself!"
+                },
+                new FAQ
+                {
+
+                    Question = "If this is free, how do you make money?",
+                    Answer = "In order to generate revenue, we'll be offering other services in the future"
+                },
+            };
+
 
             ViewBag.Locations = new List<Location>
             {
                 new Location
                 {
-                    Name = "Meshreky Residence",
+                    Name = "Tattoor Office",
                     Address1 = "1631 Camino De Salmon St",
                     City = "Corona",
                     State = "CA",
                     PostalCode = "92881"
                 },
-                //new Location
-                //{
-                //    Name = "Precision Discovery",
-                //    Address1 = "2400 E. Katella Ave.",
-                //    Address2 = "Suite 650",
-                //    City = "Anaheim",
-                //    State = "CA",
-                //    PostalCode = "92806"
-                //},
             };
 
             return View();
